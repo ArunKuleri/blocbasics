@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'cubit/counter_cubit.dart';
+import './logic/cubit/counter_cubit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
           } else if (state.wasIncrement == true) {
             ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
               content: Text("Increment!"),
-              duration: Duration(milliseconds: 300),
+              duration: Duration(),
             ));
           }
         },
@@ -69,6 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   if (state.counterValue < 0) {
                     return Text(
                       "NEGATIVE${state.counterValue}",
+                      style: Theme.of(context).textTheme.headlineMedium,
+                    );
+                  } else if (state.counterValue == 0) {
+                    return Text(
+                      state.counterValue.toString(),
                       style: Theme.of(context).textTheme.headlineMedium,
                     );
                   } else if (state.counterValue % 2 == 0) {
