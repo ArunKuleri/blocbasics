@@ -90,22 +90,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               MaterialButton(
                 color: widget.color,
-                child: Text("go to next screen"),
+                child: const Text("go to next screen"),
                 onPressed: () {
                   Navigator.of(context).pushNamed('/second');
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               MaterialButton(
-                  color: Colors.greenAccent,
-                  child: Text(
+                  color: const Color.fromRGBO(105, 240, 174, 1),
+                  child: const Text(
                     "go to third screen",
                     style: TextStyle(color: Colors.white),
                   ),

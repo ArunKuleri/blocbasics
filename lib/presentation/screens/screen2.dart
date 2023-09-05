@@ -23,12 +23,12 @@ class _SecondScreenState extends State<SecondScreen> {
       body: BlocListener<CounterCubit, CounterState>(
         listener: (context, state) {
           if (state.wasIncrement == true) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
               content: Text("Increamented"),
               duration: Duration(milliseconds: 300),
             ));
           } else if (state.wasIncrement == false) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
               content: Text("decreamented"),
               duration: Duration(milliseconds: 300),
             ));
@@ -92,22 +92,22 @@ class _SecondScreenState extends State<SecondScreen> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               MaterialButton(
                 color: widget.color,
-                child: Text("go to next screen"),
+                child: const Text("go to next screen"),
                 onPressed: () {
                   Navigator.of(context).pushNamed('/second');
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               MaterialButton(
                   color: Colors.greenAccent,
-                  child: Text(
+                  child: const Text(
                     "go to third screen",
                     style: TextStyle(color: Colors.white),
                   ),

@@ -14,7 +14,7 @@ class AppRouter {
         return MaterialPageRoute(
             builder: (_) => BlocProvider.value(
                 value: _counterCubit,
-                child: MyHomePage(
+                child: const MyHomePage(
                   title: "HomeScreen",
                   color: Colors.blueAccent,
                 )));
@@ -23,7 +23,7 @@ class AppRouter {
         return MaterialPageRoute(
             builder: (_) => BlocProvider.value(
                   value: _counterCubit,
-                  child: SecondScreen(
+                  child: const SecondScreen(
                     title: "SecondScreen",
                     color: Colors.redAccent,
                   ),
@@ -33,7 +33,7 @@ class AppRouter {
         return MaterialPageRoute(
             builder: (_) => BlocProvider.value(
                 value: _counterCubit,
-                child: ThirdScreen(
+                child: const ThirdScreen(
                     title: "ThirdScreen", color: Colors.greenAccent)));
         break;
       default:
