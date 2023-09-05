@@ -76,22 +76,22 @@ class _ThirdScreen extends State<ThirdScreen> {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
           MaterialButton(
             color: widget.color,
-            child: Text("go to next screen"),
+            child: const Text("go to next screen"),
             onPressed: () {
               Navigator.of(context).pushNamed('/second');
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
           MaterialButton(
               color: Colors.greenAccent,
-              child: Text(
+              child: const Text(
                 "go to third screen",
                 style: TextStyle(color: Colors.white),
               ),

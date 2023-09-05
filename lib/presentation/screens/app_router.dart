@@ -7,8 +7,8 @@ import 'package:flutter_cubit/presentation/screens/screen3.dart';
 
 class AppRouter {
   final CounterCubit _counterCubit = CounterCubit();
+  // ignore: non_constant_identifier_names
   Route? onGenerateRoute(RouteSettings Settings) {
-    final Object? key = Settings.arguments;
     switch (Settings.name) {
       case '/':
         return MaterialPageRoute(
@@ -18,7 +18,6 @@ class AppRouter {
                   title: "HomeScreen",
                   color: Colors.blueAccent,
                 )));
-        break;
       case '/second':
         return MaterialPageRoute(
             builder: (_) => BlocProvider.value(
@@ -28,14 +27,12 @@ class AppRouter {
                     color: Colors.redAccent,
                   ),
                 ));
-        break;
       case '/third':
         return MaterialPageRoute(
             builder: (_) => BlocProvider.value(
                 value: _counterCubit,
                 child: const ThirdScreen(
                     title: "ThirdScreen", color: Colors.greenAccent)));
-        break;
       default:
         return null;
     }

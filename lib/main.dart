@@ -6,11 +6,11 @@ import 'package:flutter_cubit/presentation/screens/homescreen.dart';
 import './logic/cubit/counter_cubit.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();

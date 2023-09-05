@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cubit/logic/cubit/counter_cubit.dart';
@@ -9,6 +7,7 @@ class SecondScreen extends StatefulWidget {
   final String title;
   final Color color;
   @override
+  // ignore: library_private_types_in_public_api
   _SecondScreenState createState() => _SecondScreenState();
 }
 

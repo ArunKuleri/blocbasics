@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_cubit/logic/cubit/counter_cubit.dart';
-import 'package:flutter_cubit/presentation/screens/screen2.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title, required this.color});
   final String title;
   final Color color;
   @override
+  // ignore: library_private_types_in_public_api
   _MyHomePageState createState() => _MyHomePageState();
 }
 
